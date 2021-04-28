@@ -241,7 +241,7 @@ function AddDocument(props) {
   );
 }
 
-function DocumentGrid(props) {
+function DocumentGrid({ navigation }) {
   //loop to gen n Document components in const
 
   return (
@@ -252,7 +252,7 @@ function DocumentGrid(props) {
         justifyContent: "center",
       }}
     >
-      <DocumentRow include_add="true" />
+      <DocumentRow include_add="true"/>
       <DocumentRow />
       <DocumentRow />
       <DocumentRow />
@@ -262,7 +262,7 @@ function DocumentGrid(props) {
 
 function DocumentRow(props) {
   const comp = props.include_add ? (
-    <AddDocument />
+    <AddDocument/>
   ) : (
     <Document document_title={"Document 0"} />
   );
